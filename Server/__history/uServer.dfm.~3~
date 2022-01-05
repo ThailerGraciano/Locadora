@@ -1,0 +1,5 @@
+object Server: TServer
+  OldCreateOrder = False
+  Height = 308
+  Width = 450
+end

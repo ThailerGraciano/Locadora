@@ -1,0 +1,98 @@
+object FrmPrincipal: TFrmPrincipal
+  AlignWithMargins = True
+  Left = 0
+  Top = 0
+  Align = alClient
+  Caption = 'In'#237'cio'
+  ClientHeight = 439
+  ClientWidth = 958
+  Color = clBtnFace
+  DragMode = dmAutomatic
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = menPrincipal
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  Visible = True
+  WindowState = wsMaximized
+  OnShow = FormShow
+  DesignSize = (
+    958
+    439)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 8
+    Top = 8
+    Width = 942
+    Height = 423
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    AutoSize = True
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    VerticalAlignment = taAlignBottom
+  end
+  object menPrincipal: TMainMenu
+    Left = 880
+    Top = 312
+    object menInicio: TMenuItem
+      Caption = 'In'#237'cio'
+      OnClick = menInicioClick
+    end
+    object menCadastro: TMenuItem
+      Caption = 'Cadastro'
+      object menCadastroUsuario: TMenuItem
+        Caption = 'Cadastro de usu'#225'rios'
+        OnClick = menCadastroUsuarioClick
+      end
+    end
+    object menAluguel: TMenuItem
+      Caption = 'Aluguel'
+    end
+  end
+  object qryDefault: TFDQuery
+    Connection = Server.DataBase
+    SQL.Strings = (
+      'SELECT * FROM usuario')
+    Left = 824
+    Top = 368
+    object qryDefaultusuario_id: TIntegerField
+      FieldName = 'usuario_id'
+      Origin = 'usuario_id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object qryDefaultusuario_nome: TWideStringField
+      FieldName = 'usuario_nome'
+      Origin = 'usuario_nome'
+      Size = 50
+    end
+    object qryDefaultusuario_datanascimento: TDateField
+      FieldName = 'usuario_datanascimento'
+      Origin = 'usuario_datanascimento'
+    end
+    object qryDefaultusuario_cargo: TWideStringField
+      FieldName = 'usuario_cargo'
+      Origin = 'usuario_cargo'
+      Size = 3
+    end
+    object qryDefaultusuario_ativo: TWideStringField
+      FieldName = 'usuario_ativo'
+      Origin = 'usuario_ativo'
+      Size = 1
+    end
+    object qryDefaultusuario_senha: TWideStringField
+      FieldName = 'usuario_senha'
+      Origin = 'usuario_senha'
+    end
+  end
+  object dsDefault: TDataSource
+    DataSet = qryDefault
+    Left = 881
+    Top = 363
+  end
+end
