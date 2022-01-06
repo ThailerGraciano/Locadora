@@ -43,13 +43,12 @@ type
     pnlEsquerda: TPanel;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
     Label4: TLabel;
     edtId: TDBEdit;
     edtNome: TDBEdit;
-    edtSenha: TDBEdit;
     edtCargo: TEdit;
     edtDataNascimento: TDBEdit;
+    rdAtivo: TDBRadioGroup;
     procedure menCadastroUsuarioClick(Sender: TObject);
     procedure menInicioClick(Sender: TObject);
     //FIM DOS ITENS DO MENU
@@ -59,6 +58,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure RefreshItens;
+    procedure tfdUsurioAfterScroll(DataSet: TDataSet);
+    procedure SetButtons(Situacao: Boolean);
   private
     { Private declarations }
   public
@@ -108,6 +109,24 @@ end;
 procedure TfrmCadastroUsuario.RefreshItens;
 begin
   //ATUALIZA CAMPOS
+end;
+
+procedure TfrmCadastroUsuario.SetButtons(Situacao: Boolean);
+begin
+  edtId.Enabled := Situacao;
+  edtNome.Enabled := Situacao;
+  edtDataNascimento.Enabled := Situacao;
+  edtCargo.Enabled := Situacao;
+  rdAtivo.Enabled := Situacao;
+end;
+
+procedure TfrmCadastroUsuario.tfdUsurioAfterScroll(DataSet: TDataSet);
+begin
+  SetButtons(False);
+  if tfdUsuriousuario_cargo.AsString = 'ADM' then
+    edtCargo.Text := 'Administrador'
+  else if tfdUsuriousuario_cargo.AsString = 'ATE' then
+    edtCargo.Text := 'Atendimento';
 end;
 
 procedure TfrmCadastroUsuario.FormClose(Sender: TObject;
