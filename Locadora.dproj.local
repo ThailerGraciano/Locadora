@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2021/11/29 20:41:34.000.269,=C:\Users\thail\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021/11/29 20:42:18.000.352,C:\Users\thail\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.dfm</Transaction>
     <Transaction>2021/11/29 20:42:18.000.352,C:\Users\thail\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.pas</Transaction>
+    <Transaction>2021/11/29 20:42:18.000.352,C:\Users\thail\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.dfm</Transaction>
     <Transaction>2021/11/29 20:45:58.000.526,C:\Users\thail\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Project3.dproj</Transaction>
     <Transaction>2021/11/29 20:46:13.000.736,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Project3.dproj=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Locadora.dproj</Transaction>
     <Transaction>2021/12/01 20:18:29.000.555,=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Telas\uLogin.pas</Transaction>
@@ -11,10 +11,10 @@
     <Transaction>2021/12/02 23:21:38.000.614,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Server\uServer.pas=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.pas</Transaction>
     <Transaction>2021/12/02 23:27:59.000.830,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Server\uServer.pas=</Transaction>
     <Transaction>2021/12/02 23:28:07.000.964,=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit2.pas</Transaction>
-    <Transaction>2021/12/02 23:29:06.000.314,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Server\uServer.dfm=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit2.dfm</Transaction>
     <Transaction>2021/12/02 23:29:06.000.314,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Server\uServer.pas=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit2.pas</Transaction>
+    <Transaction>2021/12/02 23:29:06.000.314,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Server\uServer.dfm=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit2.dfm</Transaction>
     <Transaction>2021/12/13 20:19:19.000.225,=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.pas</Transaction>
-    <Transaction>2021/12/13 20:19:47.000.005,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Telas\uCadastro_Usuario.pas=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.pas</Transaction>
     <Transaction>2021/12/13 20:19:47.000.005,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Telas\uCadastro_Usuario.dfm=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.dfm</Transaction>
+    <Transaction>2021/12/13 20:19:47.000.005,C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Telas\uCadastro_Usuario.pas=C:\Users\thail\Documents\Embarcadero\Projeto Locadora\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

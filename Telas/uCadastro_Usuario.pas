@@ -49,6 +49,7 @@ type
     edtCargo: TEdit;
     edtDataNascimento: TDBEdit;
     rdAtivo: TDBRadioGroup;
+    DBNavigator1: TDBNavigator;
     procedure menCadastroUsuarioClick(Sender: TObject);
     procedure menInicioClick(Sender: TObject);
     //FIM DOS ITENS DO MENU

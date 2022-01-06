@@ -40,7 +40,6 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       BorderStyle = bsSingle
       TabOrder = 0
       VerticalAlignment = taAlignBottom
-      ExplicitLeft = 8
       object lblNome: TLabel
         Left = 2
         Top = 42
@@ -71,7 +70,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 2
         Top = 115
         Width = 161
-        Height = 22
+        Height = 24
         Caption = 'Data Nascimento'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -113,7 +112,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 105
         Top = 36
         Width = 32
-        Height = 30
+        Height = 31
         DataField = 'usuario_id'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -128,7 +127,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 62
         Top = 72
         Width = 150
-        Height = 30
+        Height = 31
         DataField = 'usuario_nome'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -143,7 +142,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 67
         Top = 143
         Width = 150
-        Height = 30
+        Height = 31
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -19
@@ -157,7 +156,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 169
         Top = 107
         Width = 150
-        Height = 30
+        Height = 31
         DataField = 'usuario_datanascimento'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -259,6 +258,14 @@ object frmCadastroUsuario: TfrmCadastroUsuario
     Values.Strings = (
       'S'
       'N')
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 72
+    Top = 287
+    Width = 240
+    Height = 25
+    DataSource = dsUsuario
+    TabOrder = 2
   end
   object qryDefault: TFDQuery
     Connection = Server.DataBase

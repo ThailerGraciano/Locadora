@@ -50,7 +50,7 @@ uses
 
 {$R *.dfm}
 //COMEÇO DO BOTÕES DO MENU
-
+{$REGION}
 procedure TFrmPrincipal.menInicioClick(Sender: TObject);
 begin
   FrmPrincipal := TFrmPrincipal.Create(self);
@@ -74,7 +74,7 @@ begin
     FreeAndNil(frmCadastroUsuario);
   end;
 end;
-
+{$ENDREGION}
 //FIM DOS BOTÕES DO MENU
 
 procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
