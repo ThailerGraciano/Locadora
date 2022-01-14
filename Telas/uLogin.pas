@@ -30,6 +30,7 @@ type
     lblLogin: TLabel;
     btnDev: TSpeedButton;
     Panel1: TPanel;
+    btnFechar: TSpeedButton;
     procedure btnEntrarClick(Sender: TObject);
     procedure btnDevClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);

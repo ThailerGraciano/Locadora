@@ -31,7 +31,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
     Anchors = [akLeft, akTop, akRight, akBottom]
     BevelOuter = bvNone
     TabOrder = 0
-    object pnlDireita: TPanel
+    object pnlEsquerda: TPanel
       Left = 0
       Top = 0
       Width = 417
@@ -41,6 +41,9 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       TabOrder = 0
       VerticalAlignment = taAlignBottom
       ExplicitLeft = 8
+      DesignSize = (
+        413
+        513)
       object lblNome: TLabel
         Left = 2
         Top = 42
@@ -71,7 +74,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 2
         Top = 115
         Width = 161
-        Height = 22
+        Height = 24
         Caption = 'Data Nascimento'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -113,7 +116,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 105
         Top = 36
         Width = 32
-        Height = 30
+        Height = 31
         DataField = 'usuario_id'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -128,7 +131,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 62
         Top = 72
         Width = 150
-        Height = 30
+        Height = 31
         DataField = 'usuario_nome'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -143,7 +146,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 67
         Top = 143
         Width = 150
-        Height = 30
+        Height = 31
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -19
@@ -157,7 +160,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 169
         Top = 107
         Width = 150
-        Height = 30
+        Height = 31
         DataField = 'usuario_datanascimento'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -168,8 +171,17 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         ParentFont = False
         TabOrder = 3
       end
+      object DBNavigator1: TDBNavigator
+        Left = 2
+        Top = 277
+        Width = 400
+        Height = 35
+        DataSource = dsUsuario
+        Anchors = [akLeft, akRight]
+        TabOrder = 4
+      end
     end
-    object pnlEsquerda: TPanel
+    object pnlDireita: TPanel
       Left = 431
       Top = 0
       Width = 421

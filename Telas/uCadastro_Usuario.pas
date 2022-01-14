@@ -39,8 +39,8 @@ type
     tfdUsuriousuario_cargo: TWideStringField;
     tfdUsuriousuario_ativo: TWideStringField;
     tfdUsuriousuario_senha: TWideStringField;
-    pnlDireita: TPanel;
     pnlEsquerda: TPanel;
+    pnlDireita: TPanel;
     Label1: TLabel;
     Label2: TLabel;
     Label4: TLabel;
@@ -49,6 +49,7 @@ type
     edtCargo: TEdit;
     edtDataNascimento: TDBEdit;
     rdAtivo: TDBRadioGroup;
+    DBNavigator1: TDBNavigator;
     procedure menCadastroUsuarioClick(Sender: TObject);
     procedure menInicioClick(Sender: TObject);
     //FIM DOS ITENS DO MENU
