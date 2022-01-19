@@ -46,9 +46,9 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         513)
       object lblNome: TLabel
         Left = 2
-        Top = 42
+        Top = 28
         Width = 99
-        Height = 24
+        Height = 23
         Caption = 'Usu'#225'rio ID'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -59,9 +59,9 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       end
       object lblUsuario: TLabel
         Left = 2
-        Top = 78
+        Top = 64
         Width = 54
-        Height = 24
+        Height = 23
         Caption = 'Nome'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -72,23 +72,10 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       end
       object Label1: TLabel
         Left = 2
-        Top = 115
+        Top = 101
         Width = 161
-        Height = 24
+        Height = 23
         Caption = 'Data Nascimento'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -21
-        Font.Name = 'Sagoe'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label2: TLabel
-        Left = 2
-        Top = 149
-        Width = 57
-        Height = 24
-        Caption = 'Cargo'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -21
@@ -112,11 +99,24 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         ParentFont = False
         ExplicitWidth = 142
       end
+      object lblSenha: TLabel
+        Left = 1
+        Top = 132
+        Width = 60
+        Height = 24
+        Caption = 'Senha'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -21
+        Font.Name = 'Sagoe'
+        Font.Style = []
+        ParentFont = False
+      end
       object edtId: TDBEdit
         Left = 105
-        Top = 36
+        Top = 22
         Width = 32
-        Height = 31
+        Height = 30
         DataField = 'usuario_id'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -129,9 +129,9 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       end
       object edtNome: TDBEdit
         Left = 62
-        Top = 72
+        Top = 58
         Width = 150
-        Height = 31
+        Height = 30
         DataField = 'usuario_nome'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -142,25 +142,11 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         ParentFont = False
         TabOrder = 1
       end
-      object edtCargo: TEdit
-        Left = 67
-        Top = 143
-        Width = 150
-        Height = 31
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 2
-        Text = 'edtCargo'
-      end
       object edtDataNascimento: TDBEdit
         Left = 169
-        Top = 107
+        Top = 93
         Width = 150
-        Height = 31
+        Height = 30
         DataField = 'usuario_datanascimento'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -169,16 +155,54 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
-        TabOrder = 3
+        TabOrder = 2
       end
       object DBNavigator1: TDBNavigator
-        Left = 2
-        Top = 277
+        Left = 4
+        Top = 373
         Width = 400
         Height = 35
         DataSource = dsUsuario
         Anchors = [akLeft, akRight]
+        TabOrder = 3
+      end
+      object rdCargo: TDBRadioGroup
+        Left = 4
+        Top = 275
+        Width = 221
+        Height = 92
+        Caption = 'Cargo'
+        DataField = 'usuario_cargo'
+        DataSource = dsUsuario
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -21
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        Items.Strings = (
+          'ADMINISTRADOR'
+          'ATENDIMENTO')
+        ParentFont = False
         TabOrder = 4
+        Values.Strings = (
+          'ADM'
+          'ATE')
+      end
+      object edtSenha: TDBEdit
+        Left = 62
+        Top = 129
+        Width = 150
+        Height = 31
+        DataField = 'usuario_senha'
+        DataSource = dsUsuario
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        PasswordChar = '*'
+        TabOrder = 5
       end
     end
     object pnlDireita: TPanel
@@ -252,7 +276,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
   end
   object rdAtivo: TDBRadioGroup
     Left = 12
-    Top = 189
+    Top = 178
     Width = 85
     Height = 92
     Caption = 'Ativo'
@@ -313,7 +337,6 @@ object frmCadastroUsuario: TfrmCadastroUsuario
     Top = 398
   end
   object tfdUsurio: TFDTable
-    AfterScroll = tfdUsurioAfterScroll
     Connection = Server.DataBase
     Left = 64
     Top = 400

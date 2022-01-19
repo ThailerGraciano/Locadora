@@ -24,7 +24,7 @@ type
     tfdUsurio: TFDTable;
     dsUsuario: TDataSource;
 
-    //COMEÃ‡O DOS ITENS DO MENU
+    //COMEÇO DOS ITENS DO MENU
     menPrincipal: TMainMenu;
     menInicio: TMenuItem;
     menCadastro: TMenuItem;
@@ -46,10 +46,10 @@ type
     Label4: TLabel;
     edtId: TDBEdit;
     edtNome: TDBEdit;
-    edtCargo: TEdit;
     edtDataNascimento: TDBEdit;
     rdAtivo: TDBRadioGroup;
     DBNavigator1: TDBNavigator;
+    cboCargo: TDBComboBox;
     procedure menCadastroUsuarioClick(Sender: TObject);
     procedure menInicioClick(Sender: TObject);
     //FIM DOS ITENS DO MENU
@@ -59,8 +59,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure RefreshItens;
-    procedure tfdUsurioAfterScroll(DataSet: TDataSet);
-    procedure SetButtons(Situacao: Boolean);
+    procedure cboCargoEndDock(Sender, Target: TObject; X, Y: Integer);
   private
     { Private declarations }
   public
@@ -78,7 +77,7 @@ implementation
 uses
   uPrincipal;
 
-//COMEÃ‡O DO BOTÃ•ES DO MENU
+//COMEÇO DO BOTÕES DO MENU
 
 procedure TfrmCadastroUsuario.menInicioClick(Sender: TObject);
 begin
@@ -105,29 +104,21 @@ begin
   end;
 end;
 
-//FIM DOS BOTÃ•ES DO MENU
+//FIM DOS BOTÕES DO MENU
 
 procedure TfrmCadastroUsuario.RefreshItens;
 begin
   //ATUALIZA CAMPOS
 end;
 
-procedure TfrmCadastroUsuario.SetButtons(Situacao: Boolean);
-begin
-  edtId.Enabled := Situacao;
-  edtNome.Enabled := Situacao;
-  edtDataNascimento.Enabled := Situacao;
-  edtCargo.Enabled := Situacao;
-  rdAtivo.Enabled := Situacao;
-end;
 
-procedure TfrmCadastroUsuario.tfdUsurioAfterScroll(DataSet: TDataSet);
+procedure TfrmCadastroUsuario.cboCargoEndDock(Sender, Target: TObject; X, Y: Integer);
 begin
-  //SetButtons(False);
-  if tfdUsuriousuario_cargo.AsString = 'ADM' then
-    edtCargo.Text := 'Administrador'
-  else if tfdUsuriousuario_cargo.AsString = 'ATE' then
-    edtCargo.Text := 'Atendimento';
+  if cboCargo.ItemIndex = 0 then
+    tfdUsuriousuario_cargo.AsString := 'ADM'
+  else if cboCargo.ItemIndex = 1 then
+    tfdUsuriousuario_cargo.AsString := 'ATE';
+
 end;
 
 procedure TfrmCadastroUsuario.FormClose(Sender: TObject;

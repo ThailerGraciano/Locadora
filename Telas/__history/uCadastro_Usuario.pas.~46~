@@ -39,17 +39,16 @@ type
     tfdUsuriousuario_cargo: TWideStringField;
     tfdUsuriousuario_ativo: TWideStringField;
     tfdUsuriousuario_senha: TWideStringField;
-    pnlDireita: TPanel;
     pnlEsquerda: TPanel;
+    pnlDireita: TPanel;
     Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
     Label4: TLabel;
     edtId: TDBEdit;
     edtNome: TDBEdit;
-    edtSenha: TDBEdit;
-    edtCargo: TEdit;
     edtDataNascimento: TDBEdit;
+    rdAtivo: TDBRadioGroup;
+    DBNavigator1: TDBNavigator;
+    rdCargo: TDBRadioGroup;
     procedure menCadastroUsuarioClick(Sender: TObject);
     procedure menInicioClick(Sender: TObject);
     //FIM DOS ITENS DO MENU
@@ -58,6 +57,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
+    procedure RefreshItens;
   private
     { Private declarations }
   public
@@ -103,6 +103,12 @@ begin
 end;
 
 //FIM DOS BOTÕES DO MENU
+
+procedure TfrmCadastroUsuario.RefreshItens;
+begin
+  //ATUALIZA CAMPOS
+end;
+
 
 procedure TfrmCadastroUsuario.FormClose(Sender: TObject;
                                         var Action: TCloseAction);
