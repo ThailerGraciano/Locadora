@@ -8,10 +8,10 @@ uses
   Vcl.DBGrids, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  uServer, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls;
+  uServer, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.Buttons;
 
 type
-  TfrmCadastroUsuario = class(TForm)
+  TCadastroUsuario = class(TForm)
     grdUsuarios: TDBGrid;
     qryDefault: TFDQuery;
     qryDefaultusuario_id: TIntegerField;
@@ -23,13 +23,6 @@ type
     dsDefault: TDataSource;
     tfdUsurio: TFDTable;
     dsUsuario: TDataSource;
-
-    //COMEÇO DOS ITENS DO MENU
-    menPrincipal: TMainMenu;
-    menInicio: TMenuItem;
-    menCadastro: TMenuItem;
-    menCadastroUsuario: TMenuItem;
-    menAluguel: TMenuItem;
     pnlCentral: TPanel;
     lblNome: TLabel;
     lblUsuario: TLabel;
@@ -51,9 +44,6 @@ type
     rdCargo: TDBRadioGroup;
     lblSenha: TLabel;
     edtSenha: TDBEdit;
-    procedure menCadastroUsuarioClick(Sender: TObject);
-    procedure menInicioClick(Sender: TObject);
-    //FIM DOS ITENS DO MENU
 
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -67,7 +57,7 @@ type
   end;
 
 var
-  frmCadastroUsuario: TfrmCadastroUsuario;
+  CadastroUsuario: TCadastroUsuario;
   vUsuarioSelecionado: Integer;
 
 implementation
@@ -77,62 +67,32 @@ implementation
 uses
   uPrincipal;
 
-//COMEÇO DO BOTÕES DO MENU
-
-procedure TfrmCadastroUsuario.menInicioClick(Sender: TObject);
-begin
-  FrmPrincipal := TFrmPrincipal.Create(self);
-  try
-    FrmPrincipal.Visible := False;
-    FrmPrincipal.ShowModal;
-  finally
-    FreeAndNil(FrmPrincipal);
-  end;
-
-end;
-
-procedure TfrmCadastroUsuario.menCadastroUsuarioClick(Sender: TObject);
-var
-  frmCadastroUsuario : TfrmCadastroUsuario;
-begin
-  frmCadastroUsuario := TfrmCadastroUsuario.Create(Application);
-  try
-    frmCadastroUsuario.Visible := False;
-    frmCadastroUsuario.ShowModal;
-  finally
-    FreeAndNil(frmCadastroUsuario);
-  end;
-end;
-
-//FIM DOS BOTÕES DO MENU
-
-procedure TfrmCadastroUsuario.RefreshItens;
+procedure TCadastroUsuario.RefreshItens;
 begin
   //ATUALIZA CAMPOS
 end;
 
-
-procedure TfrmCadastroUsuario.FormClose(Sender: TObject;
-                                        var Action: TCloseAction);
+procedure TCadastroUsuario.FormClose(Sender: TObject;
+                                     var Action: TCloseAction);
 begin
-  Application.Terminate;
+  Close;
 end;
 
-procedure TfrmCadastroUsuario.FormCreate(Sender: TObject);
+procedure TCadastroUsuario.FormCreate(Sender: TObject);
 begin
   pnlDireita.Width    := Round(pnlCentral.Width / 2);
   pnlEsquerda.Width   := Round(pnlCentral.Width / 2);
   vUsuarioSelecionado := 0;
 end;
 
-procedure TfrmCadastroUsuario.FormResize(Sender: TObject);
+procedure TCadastroUsuario.FormResize(Sender: TObject);
 begin
   pnlEsquerda.Left  := Round((pnlCentral.Width /2) + 15);
   pnlDireita.Width  := Round(pnlCentral.Width / 2);
   pnlEsquerda.Width := Round(pnlCentral.Width / 2);
 end;
 
-procedure TfrmCadastroUsuario.FormShow(Sender: TObject);
+procedure TCadastroUsuario.FormShow(Sender: TObject);
 begin
   tfdUsurio.TableName := 'usuario';
   tfdUsurio.Active    := true;

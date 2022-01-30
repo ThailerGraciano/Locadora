@@ -3,12 +3,12 @@ unit uPrincipal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uCadastro_Usuario,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics,Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uCadastro_Usuario,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.ExtCtrls;
+  FireDAC.Comp.Client, Vcl.ExtCtrls, Vcl.Buttons;
 
 type
   TFrmPrincipal = class(TForm)
@@ -21,19 +21,11 @@ type
     qryDefaultusuario_senha: TWideStringField;
     dsDefault: TDataSource;
     Panel1: TPanel;
-
-    //COMEÇO DOS ITENS DO MENU
-    menPrincipal: TMainMenu;
-    menCadastro: TMenuItem;
-    menAluguel: TMenuItem;
-    menCadastroUsuario: TMenuItem;
-    menInicio: TMenuItem;
-    procedure menCadastroUsuarioClick(Sender: TObject);
-    procedure menInicioClick(Sender: TObject);
-    //FIM DOS ITENS DO MENU
-
+    Panel2: TPanel;
+    btnCadastroUsuario: TSpeedButton;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnCadastroUsuarioClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,33 +41,17 @@ uses
   uLogin, uServer;
 
 {$R *.dfm}
-//COMEÇO DO BOTÕES DO MENU
 
-procedure TFrmPrincipal.menInicioClick(Sender: TObject);
+procedure TFrmPrincipal.btnCadastroUsuarioClick(Sender: TObject);
 begin
-  FrmPrincipal := TFrmPrincipal.Create(self);
+  CadastroUsuario := TCadastroUsuario.Create(Application);
   try
-    FrmPrincipal.Visible := False;
-    FrmPrincipal.ShowModal;
+    CadastroUsuario.Visible := False;
+    CadastroUsuario.ShowModal;
   finally
-    FreeAndNil(FrmPrincipal);
+    FreeAndNil(CadastroUsuario);
   end;
 end;
-
-procedure TFrmPrincipal.menCadastroUsuarioClick(Sender: TObject);
-var
-  frmCadastroUsuario : TfrmCadastroUsuario;
-begin
-  frmCadastroUsuario := TfrmCadastroUsuario.Create(Application);
-  try
-    frmCadastroUsuario.Visible := False;
-    frmCadastroUsuario.ShowModal;
-  finally
-    FreeAndNil(frmCadastroUsuario);
-  end;
-end;
-
-//FIM DOS BOTÕES DO MENU
 
 procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

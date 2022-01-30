@@ -7,7 +7,7 @@ object Login: TLogin
   Caption = 'Login'
   ClientHeight = 399
   ClientWidth = 445
-  Color = clWhite
+  Color = clBlack
   DragMode = dmAutomatic
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -32,9 +32,10 @@ object Login: TLogin
     Width = 419
     Height = 373
     Align = alClient
-    Color = clWhite
+    Color = clBlack
     ParentBackground = False
     TabOrder = 0
+    StyleElements = [seFont, seClient]
     object btnFechar: TSpeedButton
       Left = 384
       Top = 0
@@ -100,16 +101,18 @@ object Login: TLogin
       OnClick = btnFecharClick
     end
     object Panel1: TPanel
-      Left = 40
-      Top = 44
+      Left = 47
+      Top = 51
       Width = 345
       Height = 299
       Align = alCustom
       Anchors = []
-      Color = clSilver
+      Color = clWhite
       ParentBackground = False
       TabOrder = 0
       VerticalAlignment = taAlignBottom
+      ExplicitLeft = 40
+      ExplicitTop = 44
       object btnDev: TSpeedButton
         Left = 106
         Top = 257
@@ -161,7 +164,7 @@ object Login: TLogin
         Height = 57
         Caption = 'ENTRAR'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
+        Font.Color = clWhite
         Font.Height = -33
         Font.Name = 'Tahoma'
         Font.Style = []
@@ -174,8 +177,9 @@ object Login: TLogin
         Top = 64
         Width = 305
         Height = 37
+        Color = clBlack
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
+        Font.Color = clWhite
         Font.Height = -24
         Font.Name = 'Tahoma'
         Font.Style = []
@@ -187,9 +191,9 @@ object Login: TLogin
         Top = 136
         Width = 305
         Height = 37
-        Color = clWhite
+        Color = clBlack
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
+        Font.Color = clWindow
         Font.Height = -24
         Font.Name = 'Tahoma'
         Font.Style = []

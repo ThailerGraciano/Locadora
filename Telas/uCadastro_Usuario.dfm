@@ -1,9 +1,11 @@
-object frmCadastroUsuario: TfrmCadastroUsuario
+object CadastroUsuario: TCadastroUsuario
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Cadastro de usu'#225'rio'
-  ClientHeight = 533
-  ClientWidth = 868
+  ClientHeight = 563
+  ClientWidth = 878
   Color = clBtnFace
   DefaultMonitor = dmMainForm
   Font.Charset = DEFAULT_CHARSET
@@ -11,44 +13,45 @@ object frmCadastroUsuario: TfrmCadastroUsuario
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = menPrincipal
   OldCreateOrder = False
-  WindowState = wsMaximized
+  Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
   OnShow = FormShow
   DesignSize = (
-    868
-    533)
+    878
+    563)
   PixelsPerInch = 96
   TextHeight = 13
   object pnlCentral: TPanel
     Left = 8
     Top = 8
-    Width = 852
-    Height = 517
+    Width = 862
+    Height = 547
     Anchors = [akLeft, akTop, akRight, akBottom]
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 852
+    ExplicitHeight = 537
     object pnlEsquerda: TPanel
       Left = 0
       Top = 0
       Width = 417
-      Height = 517
+      Height = 547
       Align = alLeft
       BorderStyle = bsSingle
       TabOrder = 0
       VerticalAlignment = taAlignBottom
-      ExplicitLeft = 8
+      ExplicitHeight = 537
       DesignSize = (
         413
-        513)
+        543)
       object lblNome: TLabel
         Left = 2
         Top = 28
         Width = 99
-        Height = 23
+        Height = 24
         Caption = 'Usu'#225'rio ID'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -61,7 +64,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 2
         Top = 64
         Width = 54
-        Height = 23
+        Height = 24
         Caption = 'Nome'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -74,7 +77,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 2
         Top = 101
         Width = 161
-        Height = 23
+        Height = 24
         Caption = 'Data Nascimento'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -97,7 +100,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Font.Name = 'Sagoe'
         Font.Style = []
         ParentFont = False
-        ExplicitWidth = 142
+        ExplicitTop = 4
       end
       object lblSenha: TLabel
         Left = 1
@@ -116,7 +119,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 105
         Top = 22
         Width = 32
-        Height = 30
+        Height = 31
         DataField = 'usuario_id'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -131,7 +134,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 62
         Top = 58
         Width = 150
-        Height = 30
+        Height = 31
         DataField = 'usuario_nome'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -146,7 +149,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
         Left = 169
         Top = 93
         Width = 150
-        Height = 30
+        Height = 31
         DataField = 'usuario_datanascimento'
         DataSource = dsUsuario
         Font.Charset = DEFAULT_CHARSET
@@ -159,12 +162,13 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       end
       object DBNavigator1: TDBNavigator
         Left = 4
-        Top = 373
+        Top = 396
         Width = 400
         Height = 35
         DataSource = dsUsuario
         Anchors = [akLeft, akRight]
         TabOrder = 3
+        ExplicitTop = 388
       end
       object rdCargo: TDBRadioGroup
         Left = 4
@@ -206,19 +210,21 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       end
     end
     object pnlDireita: TPanel
-      Left = 431
+      Left = 441
       Top = 0
       Width = 421
-      Height = 517
+      Height = 547
       Align = alRight
       BorderStyle = bsSingle
       TabOrder = 1
+      ExplicitLeft = 447
+      ExplicitHeight = 576
       object grdUsuarios: TDBGrid
         AlignWithMargins = True
         Left = 4
         Top = 4
         Width = 409
-        Height = 505
+        Height = 535
         Align = alClient
         DataSource = dsUsuario
         FixedColor = clLime
@@ -373,23 +379,5 @@ object frmCadastroUsuario: TfrmCadastroUsuario
     DataSet = tfdUsurio
     Left = 16
     Top = 400
-  end
-  object menPrincipal: TMainMenu
-    Left = 106
-    Top = 400
-    object menInicio: TMenuItem
-      Caption = 'In'#237'cio'
-      OnClick = menInicioClick
-    end
-    object menCadastro: TMenuItem
-      Caption = 'Cadastro'
-      object menCadastroUsuario: TMenuItem
-        Caption = 'Cadastro de usu'#225'rios'
-        OnClick = menCadastroUsuarioClick
-      end
-    end
-    object menAluguel: TMenuItem
-      Caption = 'Aluguel'
-    end
   end
 end
