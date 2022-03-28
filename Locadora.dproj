@@ -109,11 +109,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Telas\uPrincipal.pas">
-            <Form>FrmPrincipal</Form>
+            <Form>Principal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Telas\uCadastro_Usuario.pas">
-            <Form>frmCadastroUsuario</Form>
+            <Form>CadastroUsuario</Form>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

@@ -6,7 +6,7 @@ object FrmPrincipal: TFrmPrincipal
   Caption = 'In'#237'cio'
   ClientHeight = 459
   ClientWidth = 958
-  Color = clWhite
+  Color = clBackground
   DragMode = dmAutomatic
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -29,10 +29,12 @@ object FrmPrincipal: TFrmPrincipal
     Height = 453
     Align = alClient
     AutoSize = True
-    Color = clWhite
+    Color = clBlack
     ParentBackground = False
     TabOrder = 0
     VerticalAlignment = taAlignBottom
+    ExplicitLeft = -2
+    ExplicitTop = -2
     DesignSize = (
       952
       453)
@@ -43,7 +45,7 @@ object FrmPrincipal: TFrmPrincipal
       Width = 907
       Height = 241
       Anchors = [akLeft, akTop, akRight]
-      Color = clSilver
+      Color = clWhite
       ParentBackground = False
       TabOrder = 0
       object btnCadastroUsuario: TSpeedButton
